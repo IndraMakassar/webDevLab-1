@@ -25,9 +25,7 @@ function DivContainer() {
 
     const rowAtas = React.createElement('div', {className: 'row-atas'}, fotoElement, namaElement);
     const rowBawah = React.createElement('div', {className: 'row-bawah'}, poinKiriElement, poinKananElement);
-    const divContainer = React.createElement('div', {className: 'App-header'}, rowAtas, rowBawah);
-
-    return divContainer;
+    return React.createElement('div', {className: 'App-header'}, rowAtas, rowBawah);
 }
 
 export default DivContainer;
