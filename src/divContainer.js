@@ -6,7 +6,7 @@ function DivContainer() {
     const [circle, setCircle] = useState(false);
 
     const foto = React.createElement('img', {src: profil, className: 'foto', alt: 'logo'});
-    const fotoElement = React.createElement('div', {className: `${circle ? 'foto-lingkaran' : ''}`}, foto);
+    const fotoElement = circle ? <div>{foto}</div> : null;
     const namaElement = React.createElement('p', {className: 'nama'}, 'Antonius Indra Dharma Prasetya');
 
     const gender = React.createElement('li', null, 'gender: born male, bad circumcision, raised female');
@@ -23,7 +23,7 @@ function DivContainer() {
     const hobby = React.createElement('li', null, 'Hobby: Reading and anime');
     const poinKananElement = React.createElement('ul', {className: 'poin-kanan'}, angkatan, major, hobby, experience);
 
-    const rowAtas = React.createElement('div', {className: 'row-atas'}, fotoElement, namaElement);
+        const rowAtas = React.createElement('div', {className: 'row-atas'}, fotoElement, namaElement);
     const rowBawah = React.createElement('div', {className: 'row-bawah'}, poinKiriElement, poinKananElement);
     return React.createElement('div', {className: 'App-header'}, rowAtas, rowBawah);
 }
